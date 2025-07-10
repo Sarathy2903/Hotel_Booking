@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hotelsara | Book Luxury Hotels</title>
+   <link rel="icon" type="image/x-icon" href="./Screenshot 2025-07-10 213008.png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+      border-color: #ffcc00;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url(./home.jpg) no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content a {
+      padding: 12px 25px;
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .hero-content a:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .rooms,
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      border: 3px solid transparent;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      border-color: #717170;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card:hover h3 {
+      margin: 15px;
+      color: #333;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin: 10px 15px 15px 15px;
+      padding: 10px 20px;
+      background: #ffcc00;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      border: 2px solid transparent;
+      transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #333;
+      color: #fff;
+      border-color: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    .main {
+      text-align: center;
+      background-color: white;
+    }
+
+    .marq {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: white;
+    }
+
+    .geek1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: rgb(110, 0, 0);
+      padding-bottom: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <div style="color:rgb(255, 255, 255); font-weight:bold; font-size:1.3rem;">𝓗𝓸𝓽𝓮𝓵𝓼𝓪𝓻𝓪</div>
+    <div>
+      <a href="Home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="room.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Book Your Dream Stay Today</h1>
+      <p>Luxury. Comfort. Convenience. All in one place.</p>
+      <a href="room.html">Book Now</a>
+    </div>
+  </section>
+
+  <div class="main">
+
+    <section id="rooms">
+      <h2>Popular Rooms</h2> <br> <br>
+      <div class="rooms">
+        <div class="card">
+          <img src="./classic.jpg" alt="Room 1">
+          <h3>Classic Queen Room<br>₹4,999 / night</h3>
+          <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+
+        </div>
+        <div class="card">
+          <img src="./king.jpg" alt="Room 2">
+          <h3>Luxury King Suite<br>₹8,499 / night</h3>
+          <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        </div>
+        <div class="card">
+          <img src="./family.jpg" alt="Room 3">
+          <h3>Family Room<br>₹6,999 / night</h3>
+          <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        </div>
+        <div class="card">
+          <img src="./childrens.jpg" alt="Room 3">
+          <h3>Kids Room<br>₹1,999 / night</h3>
+          <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+    <br>
+    <hr>
+    <section id="testimonials">
+      <h2>What Our Guests Say</h2><br><br><br>
+      <div class="testimonials">
+        <div class="card">
+          <img src="./thirumal.png" alt="Review 1">
+          <h3>"Fantastic stay with great service!"<br>
+            <p>- Thirumal P.
+          </h3>
+        </div>
+        <div class="card">
+          <img src="./sarathy.png" alt="Review 2">
+          <h3>"Loved the ambiance and the food!"<br>- Sarathy B.</h3>
+        </div>
+        <div class="card">
+          <img src="./adhavan.png" alt="Review 3">
+          <h3>"Perfect for our fun & family trip!"<br>- SriAdhavan .</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: sarathybalan237@gmail.com<br>Phone: +91 6383163588</p>
+    </section>
+
+    <footer>
+      &copy; 2025 Hotelsara. All rights reserved.
+    </footer>
+
+</body>
+
+</html>

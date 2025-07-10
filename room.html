@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Our Rooms | Hotelsara</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    nav {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+      background: url(./our\ rooms.jpg) no-repeat center center/cover;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 2.8rem;
+    }
+
+    .section {
+      padding: 50px 30px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .room-card:hover {
+      transform: translateY(-8px);
+
+    }
+
+    .room-card:hover img {
+      transform: scale(1.05);
+      color: yellow;
+    }
+
+    .room-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: grey;
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .room-card h3 {
+      padding: 15px 15px 5px 15px;
+      font-size: 1.2rem;
+      color: #222;
+    }
+
+    .room-card p {
+      padding: 0 15px 15px 15px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .price-btn {
+      display: inline-block;
+      margin-left: 85px;
+      padding: 10px 20px;
+      background: green;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      border: 2px solid transparent;
+      transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .price-btn:hover {
+      background: #333;
+      color: #fff;
+      border-color: #00ff22;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin: 10px 15px 15px 15px;
+      padding: 10px 20px;
+      background: #ffcc00;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div style="font-weight: bold; font-size: 1.3rem;">𝓗𝓸𝓽𝓮𝓵𝓼𝓪𝓻𝓪</div>
+    <div>
+      <a href="Home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="room.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Our Rooms</h1>
+  </div>
+
+  <section class="section">
+    <h2>Luxury Rooms</h2>
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="./Presidential.jpg" alt="Room 1">
+        <h3>Presidential Suite</h3>
+        <p> <del> ₹ 14,999 </del>/night - Top-floor suite with private terrace and spa.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 13,999</a>
+      </div>
+      <div class="room-card">
+        <img src="./Executive.jpg" alt="Room 2">
+        <h3>Executive King Suite</h3>
+        <p> <del>₹ 9,999</del>/night - King bed, city view, and spacious bath.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 8,999</a>
+      </div>
+      <div class="room-card">
+        <img src="./ocean view.jpg" alt="Room 3">
+        <h3>Ocean View Deluxe</h3>
+        <p><del>₹ 8,499</del>/night - Elegant room with panoramic sea view.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 7,499</a>
+      </div>
+      <div class="room-card">
+        <img src="./Heritage.jpg" alt="Room 4">
+        <h3>Heritage Suite</h3>
+        <p><del>₹ 10,499</del>/night - Antique-style decor and large windows.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 9,499</a>
+      </div>
+      <div class="room-card">
+        <img src="./Penthouse.jpg" alt="Room 5">
+        <h3>Penthouse Retreat</h3>
+        <p><del>₹ 12,499</del>/night - Rooftop living with jacuzzi and skyline view.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 11,499</a>
+      </div>
+      <div class="room-card">
+        <img src="./swim.jpg" alt="Room 5">
+        <h3>Penthouse Retreat</h3>
+        <p><del>₹ 20,499</del>/night - Enjoy and Living with luxary swimming.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 19,499</a>
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <section class="section">
+    <h2>Budget Friendly Rooms</h2><br>
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="./Standard.jpg" alt="Room 6">
+        <h3>Standard Queen Room</h3>
+        <p><del>₹ 3,999</del>/night - Cozy space perfect for solo or duo travelers.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 2,999</a>
+      </div>
+      <div class="room-card">
+        <img src="./Compact Double.jpg" alt="Room 7">
+        <h3>Compact Double Room</h3>
+        <p><del>₹ 2,499</del>/night - All basic amenities at a great price.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 1,499</a>
+      </div>
+      <div class="room-card">
+        <img src="./Economy Room.jpg" alt="Room 8">
+        <h3>Economy Room</h3>
+        <p><del>₹ 1,999</del>/night - Best for short budget stays.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 1,500</a>
+      </div>
+      <div class="room-card">
+        <img src="./Single Room.jpg" alt="Room 9">
+        <h3>Single Room</h3>
+        <p><del>₹ 1,499</del>/night - Ideal for solo guests and backpackers.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 1,000</a>
+      </div>
+      <div class="room-card">
+        <img src="./Shared Dormitory.jpg" alt="Room 10">
+        <h3>Shared Dormitory</h3>
+        <p><del>₹ 999</del>/night - Shared accommodation for group travelers.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹ 799</a>
+      </div>
+      <div class="room-card">
+        <img src="./lswim.jpg" alt="Room 11">
+        <h3>Rooms With Swimming pool</h3>
+        <p><del>₹5,999</del>/night - Accommodation for Swimming With Pets.</p>
+        <a href="booking.html?room=standard-queen" class="book-btn">Book Now</a>
+        <a href="booking.html?room=standard-queen" class="price-btn">₹4,999</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Hotelsara Booking. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
